@@ -11,7 +11,7 @@ container.appendChild(contentH3);
 
 const contentDiv = document.createElement("div");
 contentDiv.style.border = "2px solid #000";
-contentDiv.style.background = "pink";
+contentDiv.style.background = "green";
 container.appendChild(contentDiv);
 
 const contentH1 = document.createElement("h1");
@@ -23,3 +23,30 @@ contentP2.textContent = "ME TOO!"
 contentDiv.appendChild(contentP2);
 
 
+const btn = document.querySelector('#btn');
+btn.onclick =  () => alert("Hello World");
+
+const kacke = document.querySelector('#kacke');
+kacke.addEventListener('click', () => {
+    alert("Hello Kacke!");
+});
+
+function alertFunction(){
+    alert("YAY! YOU DID IT!")
+}
+
+const knopf = document.querySelector('#knopf')
+knopf.onclick = alertFunction;
+knopf.addEventListener('click', alertFunction);
+
+const callback = document.querySelector('callback');
+callback.addEventListener('click', function (e) {
+    console.log(e);
+});
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+      });
+})
